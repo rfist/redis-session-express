@@ -3,6 +3,6 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm ci
 COPY . .
-RUN npm build
+RUN npm run build
 EXPOSE 4000
 CMD ["npm", "start"]

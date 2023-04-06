@@ -9,7 +9,7 @@ services:
       - node-mongo-redis-app
     volumes:
       - mongo_database_data:/data/db
-  redis_sessions:
+  redis_cache:
     image: redis
     restart: always
     ports:
