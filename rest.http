@@ -1,0 +1,26 @@
+### Health check
+GET http://localhost:3000/api
+Authorization: Bearer {{bearer}}
+
+### Sign up user
+POST http://localhost:3000/api/auth/signup
+Content-Type: application/json
+
+{
+  "firstName": "Jake",
+  "lastName": "Peralta",
+  "email": "notyouraveragecop@yahoo.com",
+  "password": "TerryLovesYogurt"
+}
+
+### Sign in user
+POST http://localhost:3000/api/auth/signin
+Content-Type: application/json
+
+{
+  "email": "notyouraveragecop@yahoo.com",
+  "password": "TerryLovesYogurt"
+}
+
+> {% client.global.set("bearer", response.body.data.token); %}
+

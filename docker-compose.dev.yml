@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  mongodb_dev:
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "27017:27017"
+  redis_dev:
+    image: redis
+    ports:
+      - "6379:6379"
